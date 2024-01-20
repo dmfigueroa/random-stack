@@ -27,6 +27,7 @@ export const entryRelations = relations(entry, ({ many, one }) => ({
 export const category = sqliteTable("categories", {
   id: integer("id").primaryKey(),
   name: text("name"),
+  icon: blob("icon"),
 });
 
 export const categoryRelations = relations(category, ({ many }) => ({
